@@ -81,13 +81,13 @@ python3 train.py --algo pporad -t bc -v 1 -e 0004 --offset_crop --decode_first_f
 python3 visualize.py --algo pporad -t bc -v 1 -e 0004 --total_timesteps 4000000 --seed 99 -u
 ```
 
-#### Train & Visualize 'Close-Box' environment in Meta-world with baselines
+#### Train 'Close-Box' environment in Meta-world with baselines
 ```
 # RAD PPO baseline
-python3 train.py --save_freq 5000000 --algo pporad -t bc -v 1 -e 0005 --total_timesteps 4000000 --seed 99 -u
+python3 train.py --algo pporad -t bc -v 1 -e 0005 --total_timesteps 4000000 --seed 99 -u
 
 # Vanilla PPO baseline
-python3 train.py --save_freq 5000000 --algo ppopixel -t bc -v 1 -e 0006 --total_timesteps 4000000 --seed 99 -u
+python3 train.py --algo ppopixel -t bc -v 1 -e 0006 --total_timesteps 4000000 --seed 99 -u
 ```
 
 #### Other environments in general
@@ -100,4 +100,11 @@ python3 visualize.py -a [algo name] -t [env name] -v [env version] -e [experimen
 
 # For colorless ant, you can change the ant example's [-t ant] flag to [-t antnc]
 # For metaworld, you can change the close-box example's [-t bc] flag to other abbreviations such as [-t door] etc.
+
+# For a full list of arugments and their meanings,
+python3 train.py -h
 ```
+
+
+## Update Log
+Jun/15/21  Initial release of the code. Email me if there are any questions or errors in this version! 
