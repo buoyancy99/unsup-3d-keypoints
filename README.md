@@ -41,7 +41,7 @@ cd unsup-3d-keypoints
 ```
 
 ## Run Experiments
-When training, all logs will be stored at ```data/``` and all check points at ```ckpts/```. 
+When training, all logs will be stored at ```data/```, visualizations will be stored in ```images/``` and all check points at ```ckpts/```. 
 You may use tensorboard to visualize training log or plotting the monitor files.
 
 #### Quick start with pre-trained weights
@@ -51,6 +51,16 @@ python3 visualize.py --algo ppokeypoint -t hammer -v 1 -m 3d -j --offset_crop --
 
 # Visualize metaworld-close-box environment
 python3 visualize.py --algo ppokeypoint -t bc -v 1 -m 3d -j --offset_crop --decode_first_frame --num_keypoint 6 --decode_attention --seed 99 -u -e 0008
+```
+
+#### Reproduce the keypoints similiar to the two pre-trained checkpoints
+```
+# To reproduce keypoints visualization similiar to the above two checkpoints, use these commands
+# Feel free to try any seed using [--seed]. Seeding makes training deterministic on each machine but has no guarantee across devices if using GPU. Thus you might not get the exact checkpoints as me if GPU models differ but resulted keypoints should look similiar. 
+
+python3 train.py --save_freq 1000000 --algo ppokeypoint -t hammer -v 1 -e 0007 -m 3d -j --total_timesteps 4000000 --offset_crop --decode_first_frame --num_keypoint 6 --decode_attention --seed 200 -u
+
+python3 train.py --save_freq 1000000 --algo ppokeypoint -t bc -v 1 -e 0008 -m 3d -j --total_timesteps 4000000 --offset_crop --decode_first_frame --num_keypoint 6 --decode_attention --seed 200 -u
 ```
 
 
@@ -75,10 +85,10 @@ python3 train.py --algo ppopixel -t ant -v 1 -e 0003 --total_timesteps 5000000 -
 
 #### Train & Visualize 'Close-Box' environment in Meta-world with Keypoint3D(Ours)
 ```
-python3 train.py --algo pporad -t bc -v 1 -e 0004 --offset_crop --decode_first_frame --num_keypoint 32 --decode_attention --total_timesteps 4000000 --seed 99 -u
+python3 train.py --algo ppokeypoint -t bc -v 1 -e 0004 -m 3d -j --offset_crop --decode_first_frame --num_keypoint 32 --decode_attention --total_timesteps 4000000 --seed 99 -u
 
 # After checkpoint is saved, visualize
-python3 visualize.py --algo pporad -t bc -v 1 -e 0004 --total_timesteps 4000000 --seed 99 -u
+python3 visualize.py --algo ppokeypoint -t bc -v 1 -e 0004 -m 3d -j --offset_crop --decode_first_frame --num_keypoint 32 --decode_attention --total_timesteps 4000000 --seed 99 -u
 ```
 
 #### Train 'Close-Box' environment in Meta-world with baselines
@@ -107,4 +117,7 @@ python3 train.py -h
 
 
 ## Update Log
-Jun/15/21  Initial release of the code. Email me if there are any questions or errors in this version! 
+| Data        | Notes           |
+| ------------- |:-------------:|
+| Jun/15/21      | Initial release of the code. Email me if you have questions or find any errors in this version.|
+   
