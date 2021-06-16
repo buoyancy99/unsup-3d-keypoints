@@ -58,9 +58,9 @@ python3 visualize.py --algo ppokeypoint -t bc -v 1 -m 3d -j --offset_crop --deco
 # To reproduce keypoints visualization similiar to the above two checkpoints, use these commands
 # Feel free to try any seed using [--seed]. Seeding makes training deterministic on each machine but has no guarantee across devices if using GPU. Thus you might not get the exact checkpoints as me if GPU models differ but resulted keypoints should look similiar. 
 
-python3 train.py --save_freq 1000000 --algo ppokeypoint -t hammer -v 1 -e 0007 -m 3d -j --total_timesteps 4000000 --offset_crop --decode_first_frame --num_keypoint 6 --decode_attention --seed 200 -u
+python3 train.py --algo ppokeypoint -t hammer -v 1 -e 0007 -m 3d -j --total_timesteps 6000000 --offset_crop --decode_first_frame --num_keypoint 6 --decode_attention --seed 200 -u
 
-python3 train.py --save_freq 1000000 --algo ppokeypoint -t bc -v 1 -e 0008 -m 3d -j --total_timesteps 4000000 --offset_crop --decode_first_frame --num_keypoint 6 --decode_attention --seed 200 -u
+python3 train.py --algo ppokeypoint -t bc -v 1 -e 0008 -m 3d -j --total_timesteps 6000000 --offset_crop --decode_first_frame --num_keypoint 6 --decode_attention --seed 200 -u
 ```
 
 
