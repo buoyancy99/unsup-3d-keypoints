@@ -48,7 +48,8 @@ class MujocoMulticamMixin(object):
     @property
     def observation_space(self):
         if self.obs_type == 'hybrid':
-            # robot_joints here is the base xy position, and robot_joint_positions is dummy all zero
+            # robot_joints here is the gripper opening-closing state as it's hardly visible from a distance
+            # robot_joint_positions is just place holder, containing all zeroes 
             observation_space = gym.spaces.Dict({
                 'images': gym.spaces.Box(low=0.0, high=1.0, shape=(len(self.camera_names),
                                                                    self.camera_height,
@@ -130,8 +131,8 @@ class MujocoMulticamMixin(object):
             robot_joints = np.array(self.sim.data.ctrl[0]).reshape((1, ))
             robot_joint_positions = np.zeros(robot_joints.shape + (3, ))
             obs = dict(images=images,
-                       robot_joints=robot_joints,   # not actually joints, but only ee xyz as described in paper
-                       robot_joint_positions=robot_joint_positions)  # not actually joints, all 0
+                       robot_joints=robot_joints,   # not actually joints, but only gripper state as it's hardly visible from a distance
+                       robot_joint_positions=robot_joint_positions)  # not actually joint positions, all 0
             return obs
 
     def reset(self):
