@@ -34,14 +34,11 @@ stable_baselines3
 .idea
 
 # experiment data
-data
-ckpts
-buffer
-images
+data/
+ckpts/
+buffer/
+images/
 
 # other
 *.TXT
 *.ipynb
-paper_data
-metaworld
-scripts/sync/copy_data.sh
