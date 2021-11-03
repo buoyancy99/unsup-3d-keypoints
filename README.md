@@ -30,14 +30,14 @@ and valid license key in ```~/.mujoco```. Otherwise, you should edit the require
 mujoco-py accordingly to avoid errors.
 
 ```
+# clone this repo
+git clone https://github.com/buoyancy99/unsup-3d-keypoints
+cd unsup-3d-keypoints
+
 # setup conda environment
 conda create -n keypoint3d python=3.7.5
 conda activate keypoint3d
 pip3 install -r requirements.txt
-
-# clone this repo
-git clone https://github.com/buoyancy99/unsup-3d-keypoints
-cd unsup-3d-keypoints
 ```
 
 ## Run Experiments
