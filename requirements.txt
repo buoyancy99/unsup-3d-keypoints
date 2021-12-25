@@ -20,7 +20,7 @@ lockfile==0.12.2
 Markdown==3.3
 matplotlib==3.3.2
 monotonic==1.5
-mujoco-py==2.0.2.13
+mujoco-py==2.1.2.14
 networkx==2.5
 numpy==1.19.2
 opencv-python==4.2.0.32
