@@ -121,3 +121,4 @@ python3 train.py -h
 | ------------- |:-------------:|
 | Jun/15/21      | Initial release of the code. Email me if you have questions or find any errors in this version.|
 | Jun/16/21      | Add all metaworld environments with notes about placeholder observations|
+| Dec/25/21      | Updated requirements.txt such that the mujoco free 2.1 version is used|
