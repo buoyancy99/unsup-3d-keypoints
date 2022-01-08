@@ -115,11 +115,11 @@ python3 visualize.py -a [algo name] -t [env name] -v [env version] -e [experimen
 python3 train.py -h
 ```
 
-### Request original data and plot curves
+## Request original data and plot curves
 I kept the all the `.csv` data files used for plotting learning curves. This should make it much easier for you to plot our methods and implemented baselines in your paper. Email me to request the data and plotting tools.
 
 
-## Update Log
+## Change Log
 | Data        | Notes           |
 | ------------- |:-------------:|
 | Jun/15/21      | Initial release of the code. Email me if you have questions or find any errors in this version.|
