@@ -24,6 +24,11 @@ If you find this work helpful to your research, please cite us as:
 }
 ```
 
+For questions about code, please create an issue on github. For questions about paper, please reach me at boyuanc@mit.edu
+
+## Request original data and plot curves
+I kept the all the `.csv` data files used for plotting learning curves. This should make it much easier for you to plot our methods and implemented baselines in your paper. Email me to request the data and plotting tools.
+
 ## Environment Setup
 If you hope to run [meta-world](https://meta-world.github.io/) experiments, make sure you have your mujoco binaries
 and valid license key in ```~/.mujoco```. Otherwise, you should edit the requirements.txt to remove metaworld and 
@@ -115,9 +120,6 @@ python3 visualize.py -a [algo name] -t [env name] -v [env version] -e [experimen
 python3 train.py -h
 ```
 
-## Request original data and plot curves
-I kept the all the `.csv` data files used for plotting learning curves. This should make it much easier for you to plot our methods and implemented baselines in your paper. Email me to request the data and plotting tools.
-
 
 ## Change Log
 | Data        | Notes           |
@@ -125,4 +127,5 @@ I kept the all the `.csv` data files used for plotting learning curves. This sho
 | Jun/15/21      | Initial release of the code. Email me if you have questions or find any errors in this version.|
 | Jun/16/21      | Add all metaworld environments with notes about placeholder observations|
 | Dec/25/21      | Updated requirements.txt such that the mujoco free 2.1 version is used|
-| Jan/08/23      | Add data request guide|
+| Jan/08/22      | Add data request guide in README|
+| Jun/10/22      | Update my preferred communication and move data request upward in README|
