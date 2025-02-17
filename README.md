@@ -17,10 +17,12 @@ We jointly train an RL policy with the keypoint detector and shows 3d keypoints 
 If you find this work helpful to your research, please cite us as:
 ```
 @inproceedings{chen2021unsupervised,
-    title={Unsupervised Learning of Visual 3D Keypoints for Control},
-    author={Boyuan Chen and Pieter Abbeel and Deepak Pathak},
-    year={2021},
-    Booktitle={ICML}
+  title={Unsupervised learning of visual 3d keypoints for control},
+  author={Chen, Boyuan and Abbeel, Pieter and Pathak, Deepak},
+  booktitle={International Conference on Machine Learning},
+  pages={1539--1549},
+  year={2021},
+  organization={PMLR}
 }
 ```
 
